@@ -33,13 +33,13 @@ namespace clap {
               _filterAdsr(synth, "filter env", FltAdsrId), _filter(synth, "filter", FltId),
               _digiOsc1(synth, "osc1", Osc1Id), _digiOsc2(synth, "osc2", Osc2Id) {
             _osc1VolumeParam = addParameter(
-               0, "osc1", Parameter::POLY_FLAGS, std::make_unique<DecibelValueType>(-120, 24, 0));
+               0, "osc1", Parameter::POLY_FLAGS, std::make_unique<DecibelValueType>(-120, 24, -3));
 
             _osc2VolumeParam = addParameter(
-               1, "osc2", Parameter::POLY_FLAGS, std::make_unique<DecibelValueType>(-120, 24, 0));
+               1, "osc2", Parameter::POLY_FLAGS, std::make_unique<DecibelValueType>(-120, 24, -3));
 
             _volumeParam = addParameter(
-               2, "volume", Parameter::POLY_FLAGS, std::make_unique<DecibelValueType>(-120, 0, 0));
+               2, "volume", Parameter::POLY_FLAGS, std::make_unique<DecibelValueType>(-120, 0, -12));
 
             performRouting();
          }
